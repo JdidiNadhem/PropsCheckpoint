@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import './Components/Navbar/Navbar.css';
+import N from './Components/Navbar/Navbar';
+import P from "./Components/Profile/Profile";
+import './Components/Profile/Profile.css';
+import A from "./Components/About/About";
+import "./Components/About/About.css";
 
 function App() {
+   const handleName  = fullname => alert(fullname);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <N/>
+     <div className="aboutme">
+     { <P  fullname="Jdidi Nadhem" bio="Degree from ESSECT" profession="Software developer"  handleName={handleName}>CVPIC.JPG</P> }
+     <A fullname="Jdidi Nadhem" location="Tunis,Tunisia" degree="Essect" phone="53310408" email="jedidinadhem@gmail.com" dateOfBirth="13/06/1997" experience="1 Year" careerLevel="Mid-Level"/>
+     </div>
     </div>
   );
 }
